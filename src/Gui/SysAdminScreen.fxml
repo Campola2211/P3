@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="521.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Gui.SysAdminScreenController">
+   <children>
+      <TabPane layoutY="37.0" prefHeight="302.0" prefWidth="522.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Make User">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="28.0" layoutY="23.0" text="User Name:" />
+                        <Label layoutX="36.0" layoutY="59.0" text="Password:" />
+                        <Label layoutX="29.0" layoutY="103.0" text="First Name:" />
+                        <Label layoutX="29.0" layoutY="144.0" text="Last Name:" />
+                        <Label layoutX="62.0" layoutY="181.0" text="Email:" />
+                        <TextField fx:id="userNameTF" layoutX="110.0" layoutY="18.0" promptText="Enter User Name" />
+                        <TextField fx:id="passwordTF" layoutX="110.0" layoutY="54.0" promptText="Enter Password" />
+                        <TextField fx:id="firstNameTF" layoutX="110.0" layoutY="98.0" promptText="Enter First Name" />
+                        <TextField fx:id="lastNameTF" layoutX="110.0" layoutY="139.0" promptText="Enter Last Name" />
+                        <TextField fx:id="emailTF" layoutX="110.0" layoutY="176.0" promptText="Enter Email" />
+                        <Label layoutX="332.0" layoutY="23.0" text="All Users:" />
+                        <ListView fx:id="allUsersList" layoutX="330.0" layoutY="44.0" prefHeight="164.0" prefWidth="178.0" />
+                        <Separator layoutX="315.0" layoutY="-4.0" orientation="VERTICAL" prefHeight="277.0" prefWidth="4.0" />
+                        <Label layoutX="9.0" layoutY="215.0" text="Account Type:" />
+                        <Button fx:id="addUserBTN" layoutX="432.0" layoutY="224.0" mnemonicParsing="false" onAction="#doAddUser" text="Add User" />
+                        <ComboBox fx:id="accountTypeCBOX" layoutX="110.0" layoutY="211.0" prefHeight="27.0" prefWidth="168.0" promptText="Select Type" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+          <Tab text="Delete User">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <ComboBox fx:id="selectUserCBOX" layoutX="134.0" layoutY="25.0" prefWidth="150.0" promptText="Select User" />
+                        <Button fx:id="deleteUserBTN" layoutX="22.0" layoutY="25.0" mnemonicParsing="false" onAction="#doDeleteUser" text="Delete User" />
+                        <Separator layoutX="314.0" layoutY="-3.0" orientation="VERTICAL" prefHeight="356.0" prefWidth="8.0" />
+                        <Label layoutX="22.0" layoutY="76.0" text="(Please delete a user at your own risk.)" />
+                        <TextArea fx:id="deleteTA" editable="false" layoutX="333.0" layoutY="56.0" prefHeight="200.0" prefWidth="168.0" />
+                        <Label layoutX="333.0" layoutY="25.0" text="Output:" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Reset User Password">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Separator layoutX="314.0" orientation="VERTICAL" prefHeight="275.0" prefWidth="8.0" />
+                        <ComboBox fx:id="selectUser2CBOX" layoutX="154.0" layoutY="27.0" prefWidth="150.0" promptText="Select User" />
+                        <Button fx:id="resetPasswordBTN" layoutX="20.0" layoutY="27.0" mnemonicParsing="false" onAction="#doResetPassword" text="Reset Password" />
+                        <Button fx:id="resetAllBTN" layoutX="20.0" layoutY="192.0" mnemonicParsing="false" onAction="#doResetAll" text="Reset All Password" />
+                        <Label layoutX="20.0" layoutY="118.0" text="Warning:" textFill="RED">
+                           <font>
+                              <Font size="26.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="20.0" layoutY="157.0" text="Use only for extreme measures." />
+                        <TextArea fx:id="resetTA" editable="false" layoutX="338.0" layoutY="49.0" prefHeight="200.0" prefWidth="162.0" />
+                        <Label layoutX="338.0" layoutY="19.0" text="Output:" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <Separator layoutY="36.0" prefHeight="1.0" prefWidth="522.0" />
+      <Separator layoutY="339.0" prefHeight="3.0" prefWidth="522.0" />
+      <Label fx:id="welcomeLabel" layoutX="14.0" layoutY="14.0" text="Welcome label">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="logoutButton" layoutX="448.0" layoutY="359.0" mnemonicParsing="false" onAction="#doLogout" text="Logout" />
+      <Button fx:id="saveAllButton" layoutX="14.0" layoutY="359.0" mnemonicParsing="false" onAction="#doSaveAll" text="Save All" />
+      <Label fx:id="saveLabel" layoutX="218.0" layoutY="361.0" text="Saved All!">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

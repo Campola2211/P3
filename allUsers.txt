@@ -1,0 +1,5 @@
+admin password Admin User admin@cs.umw.edu SysAdmin
+officeMan password Office Man officeMan@mail.com OfficeMan
+whMan password WareHouse Man whMan@mail.com WhMan
+salesAsso1 pass1 Sales Asso1 salesAsso1@mail.umw SalesAsso
+salesAsso2 pass2 Sales Asso2 salesAsso2@mail.com SalesAsso

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="250.0" prefWidth="385.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Gui.LoginScreenController">
+   <children>
+      <Label layoutX="22.0" layoutY="26.0" text="Welcome to BikePart-Distribution Program">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="22.0" layoutY="100.0" text="User Name:" />
+      <Label layoutX="26.0" layoutY="136.0" text="Password:" />
+      <TextField fx:id="userNameTF" layoutX="120.0" layoutY="95.0" prefHeight="27.0" prefWidth="240.0" promptText="Enter UserName" />
+      <Button fx:id="loginButton" layoutX="163.0" layoutY="186.0" mnemonicParsing="false" onAction="#doLogin" text="Login" />
+      <Label fx:id="wrongPasswordLabel" layoutX="22.0" layoutY="169.0" text="Incorrect Password!" textFill="RED" />
+      <Label fx:id="userNotFoundLabel" layoutX="22.0" layoutY="169.0" text="User not found!" textFill="RED" />
+      <PasswordField fx:id="passwordTF" layoutX="118.0" layoutY="131.0" prefHeight="27.0" prefWidth="240.0" promptText="Enter Password" />
+   </children>
+</Pane>

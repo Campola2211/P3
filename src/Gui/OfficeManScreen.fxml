@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="413.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Gui.OfficeManScreenController">
+   <children>
+      <TabPane layoutY="44.0" prefHeight="302.0" prefWidth="413.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Order Parts">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="21.0" layoutY="14.0" text="Output:" />
+                        <TextArea fx:id="orderPartsTA" editable="false" layoutX="21.0" layoutY="35.0" prefHeight="149.0" prefWidth="374.0" />
+                        <Button fx:id="orderPartsBTN" layoutX="310.0" layoutY="216.0" mnemonicParsing="false" onAction="#doOrderParts" text="Order Parts" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+          <Tab text="Examine Parts">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="45.0" layoutY="25.0" text="Part Name:" />
+                        <TextField fx:id="partNameTF" layoutX="119.0" layoutY="20.0" prefHeight="27.0" prefWidth="272.0" promptText="Enter PartName" />
+                        <Label layoutX="63.0" layoutY="52.0" text="OR" textFill="RED">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="27.0" layoutY="80.0" text="Part Number:" />
+                        <TextField fx:id="partNumberTF" layoutX="119.0" layoutY="75.0" prefHeight="27.0" prefWidth="270.0" promptText="Enter PartNumber" />
+                        <Label layoutX="46.0" layoutY="126.0" text="Location:" />
+                        <TextField fx:id="locationTF" layoutX="117.0" layoutY="121.0" prefHeight="27.0" prefWidth="273.0" promptText="Enter Location (WareHouse or SaleVan)" />
+                        <Button fx:id="displayBTN" layoutX="336.0" layoutY="184.0" mnemonicParsing="false" onAction="#doDisplay" text="Display" />
+                        <Label layoutX="13.0" layoutY="163.0" text="Output:" />
+                        <TextArea fx:id="examinePartsTA" editable="false" layoutX="13.0" layoutY="184.0" prefHeight="68.0" prefWidth="304.0" />
+                        <Separator layoutX="-15.0" layoutY="160.0" prefHeight="3.0" prefWidth="428.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Sales Invoice">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="14.0" layoutY="21.0" text="Enter Start Date:" />
+                        <TextField fx:id="startDateTF" layoutX="123.0" layoutY="16.0" prefHeight="27.0" prefWidth="263.0" promptText="Enter Date (MM-DD-YYYY)" />
+                        <Label layoutX="19.0" layoutY="62.0" text="Enter End Date:" />
+                        <TextField fx:id="endDateTF" layoutX="123.0" layoutY="57.0" prefHeight="27.0" prefWidth="264.0" promptText="Enter Date (MM-DD-YYYY)" />
+                        <Label layoutX="82.0" layoutY="106.0" text="User:" />
+                        <TextField layoutX="123.0" layoutY="101.0" prefHeight="27.0" prefWidth="264.0" promptText="Enter User Name" />
+                        <Button fx:id="viewBTN" layoutX="326.0" layoutY="214.0" mnemonicParsing="false" onAction="#doView" prefHeight="27.0" prefWidth="61.0" text="View" />
+                        <Label layoutX="87.0" layoutY="135.0" text="OR" textFill="RED">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="50.0" layoutY="166.0" text="Customer:" />
+                        <TextField fx:id="customerTF" layoutX="123.0" layoutY="161.0" prefHeight="27.0" prefWidth="262.0" promptText="Enter Customer " />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <Label fx:id="welcomeLabel" layoutX="14.0" layoutY="14.0" text="Welcome label">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="logoutBTN" layoutX="326.0" layoutY="359.0" mnemonicParsing="false" onAction="#doLogout" text="Logout" />
+      <Separator layoutY="43.0" prefHeight="3.0" prefWidth="413.0" />
+      <Separator layoutY="345.0" prefHeight="3.0" prefWidth="413.0" />
+   </children>
+</Pane>
